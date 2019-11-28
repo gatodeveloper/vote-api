@@ -7,16 +7,11 @@ var logger = require('morgan');
 var bodyParser = require('body-parser');
 const session = require('express-session');
 
-
-//var indexRouter = require('../../routes/index');
 var newsRoutes = require('../modules/news/routes/news.routes');
 var usersRoutes = require('../modules/users/routes/users.routes');
 
-
 var app = express();
 
-// view engine setup
-//app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
@@ -29,14 +24,8 @@ app.use(bodyParser.raw({
 }));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-// app.use(session({
-//     secret: 'secret',
-//     resave: false,
-//     saveUninitialized: false
-// }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-//app.use('/', indexRouter);
 app.use('/news', newsRoutes);
 app.use('/users', usersRoutes);
 

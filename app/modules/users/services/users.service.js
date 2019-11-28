@@ -5,7 +5,6 @@ function create(data) {
 	return Users.create(data);
 };
 
-
 module.exports.getAll = getAll;
 function getAll() {
 	return Users.find({});
