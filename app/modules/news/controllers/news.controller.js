@@ -27,10 +27,23 @@ exports.getById = function(req, res){
     });
 }
 
+exports.vote = function(req, res){
+  let id = req.params.id;
+  let vote = req.body.vote;
+  console.log(vote)
+  newsServices.vote(id, vote)
+    .then( result => {
+      res.send(result);
+    })
+    .catch( error => {
+      console.log(error);
+    });
+}
+
 exports.getAll = function(req, res){
   newsServices.getAll()
     .then( result => {
-      res.send(result);
+      res.send({data:result});
     })
     .catch( error => {
       console.log(error);
