@@ -2,9 +2,13 @@
   "name": "voteapi",
   "version": "0.0.0",
   "private": true,
+  "main": "app.js",
   "scripts": {
     "start": "node app.js",
     "live": "nodemon app.js"
+  },
+  "engines": {
+    "node": "10.x"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
