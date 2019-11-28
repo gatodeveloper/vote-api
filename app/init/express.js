@@ -29,11 +29,11 @@ app.use(bodyParser.raw({
 }));
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(session({
-    secret: 'secret',
-    resave: false,
-    saveUninitialized: false
-}));
+// app.use(session({
+//     secret: 'secret',
+//     resave: false,
+//     saveUninitialized: false
+// }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //app.use('/', indexRouter);
