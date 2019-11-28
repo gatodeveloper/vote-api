@@ -7,7 +7,7 @@ module.exports = (function(){
     JWT_KEY: 'GatoDeveloper'
   };
 
-  var envConfig = require('./env/' + (process.env.NODE_ENV ? process.env.NODE_ENV : 'dev'));
+  var envConfig = require('./env/' + (process.env.NODE_ENV ? process.env.NODE_ENV : 'development'));
   var config = Object.assign(config, envConfig);
   return config;
 })();
