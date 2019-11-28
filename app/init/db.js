@@ -13,7 +13,7 @@ const mongoConfig = {
 
 const connectWithRetry = () => {
 
-	mongoose.connect(config.db.connectionString, mongoConfig);
+	mongoose.connect(process.env.MONGODB_URI || config.db.connectionString, mongoConfig);
 	mongoose.connection
 	 .once('open', () => console.log('DB Connected!'))
 	 .on('error', (error) => {

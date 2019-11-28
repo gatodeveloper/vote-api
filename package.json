@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "live": "nodemon app.js"
+    "live": "nodemon app.js",
+    "build": "npm install"
   },
   "engines": {
     "node": "10.x"
@@ -21,7 +22,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.7.12",
     "morgan": "~1.9.1",
-    "pug": "2.0.0-beta11",
+    "pug": "^2.0.4",
     "validator": "^12.1.0"
   }
 }
